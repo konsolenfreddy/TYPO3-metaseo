@@ -218,6 +218,12 @@ plugin.metaseo {
                     doNotLinkIt = 1
                 }
             }
+
+            
+            #typolink  configuration for section links
+            typolink {
+                additionalParams = 
+            }
         }
 
         # list of stdWraps for advanced metatag manipulations

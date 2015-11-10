@@ -1220,7 +1220,7 @@ class MetatagPart extends AbstractPart
         // Generate rootpage url
         $rootPageUrl = null;
         if (!empty($rootPage)) {
-            $rootPageUrl = $this->generateLink($rootPage['uid']);
+            $rootPageUrl = $this->generateLink($rootPage['uid'], $this->tsSetupSeo['sectionLinks.']['typolink']);
         }
 
         // Only generate up, prev and next if NOT rootpage
@@ -1230,13 +1230,13 @@ class MetatagPart extends AbstractPart
             $prevPage    = $GLOBALS['TSFE']->cObj->HMENU($this->tsSetupSeo['sectionLinks.']['prev.']);
             $prevPageUrl = null;
             if (!empty($prevPage)) {
-                $prevPageUrl = $this->generateLink($prevPage);
+                $prevPageUrl = $this->generateLink($prevPage, $this->tsSetupSeo['sectionLinks.']['typolink']);
             }
 
             $nextPage    = $GLOBALS['TSFE']->cObj->HMENU($this->tsSetupSeo['sectionLinks.']['next.']);
             $nextPageUrl = null;
             if (!empty($nextPage)) {
-                $nextPageUrl = $this->generateLink($nextPage);
+                $nextPageUrl = $this->generateLink($nextPage, $this->tsSetupSeo['sectionLinks.']['typolink']);
             }
         }
 
